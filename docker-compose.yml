@@ -1,0 +1,16 @@
+db:
+  image: postgres
+  environment:
+    POSTGRES_PASSWORD: dexf
+    POSTGRES_USER: dexf
+web:
+  build: .
+  environment:
+    - NODE_ENV=development
+  volumes:
+    - "./app:/src/app/"
+  env_file: .env
+  ports:
+    - "3030:3000"
+  links:
+   - db
