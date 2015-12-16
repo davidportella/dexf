@@ -1,9 +1,11 @@
 {
-  "name": "Cefe",
+  "name": "cefe",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "nodemon -L app/bin/www"
+    "start": "nodemon -L app/bin/www",
+    "test": "npm run test-unit",
+    "test-unit": "mocha app/test/*/*.test.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -15,6 +17,15 @@
     "serve-favicon": "~2.3.0",
     "sequelize": "3.13.0",
     "pg": "4.4.3",
-    "pg-hstore": "2.3.2"
+    "pg-hstore": "2.3.2",
+    "passport": "0.3.2",
+    "passport-http": "0.3.0"
+  },
+  "devDependencies": {
+    "bluebird": "^2.9.33",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.5",
+    "supertest": "^1.0.1",
+    "should": "8.0.1"
   }
 }

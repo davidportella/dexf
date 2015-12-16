@@ -25,6 +25,11 @@ app.use(cookieParser());
 // Static
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Configuring Passport
+var passport = require('passport');
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Routers
 app.use(require('./routes'));
 

@@ -4,20 +4,22 @@
     "password": "dexf",
     "database": "dexf",
     "host": "db",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "logging": false
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "test",
+    "password": "test",
+    "database": "test",
+    "host": "test",
+    "dialect": "postgres",
+    "logging": false
   },
   "production": {
     "username": "root",
-    "password": null,
+    "password": "secretkey",
     "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   }
 }
